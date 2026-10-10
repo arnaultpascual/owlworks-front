@@ -1,0 +1,110 @@
+{
+  "tl-shot-01-bataille": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-02-evolution": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-06-boss": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-07-archipel": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-raw-battle-horde": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-01-bataille-en": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-02-evolution-en": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-06-boss-en": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "tl-shot-07-archipel-en": {
+    "width": 1080,
+    "height": 1920,
+    "widths": [
+      360,
+      540,
+      810
+    ],
+    "ratio": 0.5625
+  },
+  "rs-confirm": {
+    "width": 1190,
+    "height": 350,
+    "widths": [
+      640,
+      960
+    ],
+    "ratio": 3.4
+  },
+  "rs-register": {
+    "width": 980,
+    "height": 470,
+    "widths": [
+      640,
+      960
+    ],
+    "ratio": 2.0851
+  }
+}

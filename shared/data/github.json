@@ -1,0 +1,64 @@
+{
+  "user": "arnaultpascual",
+  "source": "public profile + REST",
+  "fetchedAt": "2026-10-10T14:23:07.111Z",
+  "repos": [
+    {
+      "name": "OctopusFTP",
+      "description": "High-performance multi-connection FTP/FTPS downloader with speed limiting, bandwidth graphs, and file integrity verification",
+      "url": "https://github.com/arnaultpascual/OctopusFTP",
+      "homepage": "",
+      "stars": 4,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "bandwidth",
+        "bandwidth-monitor",
+        "filetransfer",
+        "filetransfers",
+        "ftp",
+        "ftp-client",
+        "ftps",
+        "ftpserver",
+        "multithreading",
+        "python",
+        "python3",
+        "speedlimit",
+        "speedlimiter"
+      ]
+    },
+    {
+      "name": "Verrou",
+      "description": "Sovereign, offline-first, post-quantum encrypted desktop vault for 2FA codes, seed phrases, credentials, and secure notes. Zero network, all crypto in Rust. Built with Tauri 2 + SolidJS.",
+      "url": "https://github.com/arnaultpascual/Verrou",
+      "homepage": "",
+      "stars": 32,
+      "forks": 0,
+      "language": "Rust",
+      "topics": [
+        "2fa",
+        "bip39",
+        "encryption",
+        "offline-first",
+        "password-manager",
+        "post-quantum",
+        "postquantum-crypto",
+        "rust",
+        "solidjs",
+        "tauri",
+        "totp",
+        "vault"
+      ]
+    },
+    {
+      "name": "atelier",
+      "description": "Native macOS orchestrator for parallel Claude Code agents. Run multiple workers in isolated git worktrees, approve sensitive operations from a unified inbox, pick the right model per task, track costs live. MIT licensed.",
+      "url": "https://github.com/arnaultpascual/atelier",
+      "homepage": "",
+      "stars": 4,
+      "forks": 0,
+      "language": "Swift",
+      "topics": []
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://owlworks.dev/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/"/>
+  </url>
+  <url>
+    <loc>https://owlworks.dev/en/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/"/>
+  </url>
+  <url>
+    <loc>https://owlworks.dev/legal/mentions-legales/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/legal/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/legal/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/legal/mentions-legales/"/>
+  </url>
+  <url>
+    <loc>https://owlworks.dev/en/legal/legal-notice/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/legal/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/legal/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/legal/mentions-legales/"/>
+  </url>
+  <url>
+    <loc>https://owlworks.dev/legal/tiny-legion/confidentialite/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/legal/tiny-legion/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/legal/tiny-legion/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/legal/tiny-legion/confidentialite/"/>
+  </url>
+  <url>
+    <loc>https://owlworks.dev/en/legal/tiny-legion/privacy/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://owlworks.dev/legal/tiny-legion/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlworks.dev/en/legal/tiny-legion/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlworks.dev/legal/tiny-legion/confidentialite/"/>
+  </url>
+</urlset>

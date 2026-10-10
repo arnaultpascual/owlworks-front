@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tiny-legion/
+
+Sitemap: https://owlworks.dev/sitemap.xml

@@ -1,0 +1,27 @@
+{
+  "name": "OwlWorks",
+  "short_name": "OwlWorks",
+  "description": "Studio indépendant : SaaS, apps mobiles, outils pour développeurs.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FCF0E8",
+  "theme_color": "#011F2A",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

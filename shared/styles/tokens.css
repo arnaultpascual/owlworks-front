@@ -1,0 +1,121 @@
+/* OwlWorks design tokens. The brand face (Oxanium, standing in for Geom Graphic) is --font-brand. */
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/shared/fonts/oxanium-var.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Saira';
+  src: url('/shared/fonts/saira-text.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/shared/fonts/jetbrains-mono-var.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: swap;
+}
+/* Product faces — only downloaded where a product section uses them. */
+@font-face {
+  font-family: 'Lilita One';
+  src: url('/shared/fonts/lilita-one.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('/shared/fonts/red-hat-display-var.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+:root {
+  /* ---- OwlWorks core ---- */
+  --c-orange: #ff6a13; /* decorative on cream (2.6:1) — never text on cream */
+  --c-orange-ink: #b4460a; /* orange for text on cream: 4.9:1 */
+  --c-orange-deep: #8f3606;
+  --c-night: #011f2a; /* text on cream: 15:1 */
+  --c-night-2: #032b3a;
+  --c-night-3: #0a3b4e;
+  --c-night-4: #13506a;
+  --c-night-deep: #00131a;
+  --c-cream: #fcf0e8; /* sampled from the logo */
+  --c-cream-2: #f5e1d3;
+  --c-paper: #fff8f2;
+  --c-mist: #8fa9b3; /* secondary text on night: 6.9:1 */
+  --c-slate: #4e6a75; /* secondary text on cream: 5.1:1 */
+
+  /* ---- products (their own identities) ---- */
+  --tl-yellow: #f7c531;
+  --tl-yellow-pale: #fde68a;
+  --tl-blue: #1f39a0;
+  --tl-blue-deep: #142670;
+  --tl-ocean: #2bb5ce;
+  --tl-ocean-light: #61c9d6;
+  --tl-road: #efe6d6;
+  --tl-red: #e5393b;
+  --tl-ui: #202944;
+
+  --rs-wine: #8c1d2f;
+  --rs-wine-deep: #5e1220;
+  --rs-cream: #f6e7d8;
+  --rs-paper: #fbf4ec;
+  --rs-ink: #2a1a1c;
+
+  --tw-black: #09090b;
+  --tw-zinc: #18181b;
+  --tw-line: #27272a;
+  --tw-muted: #a1a1aa;
+  --tw-orange: #e26112;
+  --tw-green: #4ade80;
+  --tw-amber: #f59e0b;
+  --tw-red: #ef4444;
+
+  /* ---- type ---- */
+  --font-brand: 'Oxanium', 'Saira', ui-sans-serif, system-ui, sans-serif;
+  --font-text: 'Saira', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-game: 'Lilita One', 'Oxanium', system-ui, sans-serif;
+  --font-seal: 'Red Hat Display', 'Saira', system-ui, sans-serif;
+
+  /* fluid type scale (min at 360px, max at 1440px) */
+  --step--1: clamp(0.8rem, 0.77rem + 0.13vw, 0.89rem);
+  --step-0: clamp(1rem, 0.96rem + 0.19vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.13rem + 0.33vw, 1.43rem);
+  --step-2: clamp(1.44rem, 1.31rem + 0.56vw, 1.8rem);
+  --step-3: clamp(1.73rem, 1.51rem + 0.95vw, 2.37rem);
+  --step-4: clamp(2.07rem, 1.71rem + 1.58vw, 3.13rem);
+  --step-5: clamp(2.49rem, 1.89rem + 2.6vw, 4.24rem);
+  --step-6: clamp(2.99rem, 2.01rem + 4.2vw, 5.83rem);
+  --step-7: clamp(3.58rem, 1.98rem + 6.9vw, 8.2rem);
+  --step-8: clamp(4.3rem, 1.6rem + 12vw, 12.5rem);
+
+  /* ---- space ---- */
+  --gutter: clamp(16px, 4vw, 56px);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 9rem;
+  --measure: 62ch;
+
+  /* ---- motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.1, 1.2);
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 640ms;
+
+  /* ---- focus ---- */
+  --focus-ring: 3px solid var(--c-orange);
+  --focus-offset: 3px;
+}

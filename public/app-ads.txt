@@ -1,0 +1,3 @@
+# app-ads.txt for owlworks.dev
+# TODO: paste the line AdMob gives you (AdMob › Apps › app-ads.txt), e.g.
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

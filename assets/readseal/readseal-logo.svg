@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <title>ReadSeal</title>
+  <!-- The wax seal: a 24-point rosette, its corners rounded by the stroke. -->
+  <path d="M48.0,4.0 L58.1,10.3 L70.0,9.9 L75.6,20.4 L86.1,26.0 L85.7,37.9 L92.0,48.0 L85.7,58.1 L86.1,70.0 L75.6,75.6 L70.0,86.1 L58.1,85.7 L48.0,92.0 L37.9,85.7 L26.0,86.1 L20.4,75.6 L9.9,70.0 L10.3,58.1 L4.0,48.0 L10.3,37.9 L9.9,26.0 L20.4,20.4 L26.0,9.9 L37.9,10.3 Z"
+        fill="#8C1D2F" stroke="#8C1D2F" stroke-width="4" stroke-linejoin="round"/>
+  <!-- The impression ring, and the check pressed into the wax. -->
+  <circle cx="48" cy="48" r="29" fill="none" stroke="#F6E7D8" stroke-width="2.5" stroke-opacity="0.9"/>
+  <path d="M35 49 L44 58 L62 38" fill="none" stroke="#F6E7D8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

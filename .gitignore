@@ -1,0 +1,9 @@
+node_modules/
+dist/
+review/
+_archive/
+lab/
+.claude/
+.DS_Store
+trace.json
+NOTES.md
