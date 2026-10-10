@@ -1,3 +1,2 @@
-# app-ads.txt for owlworks.dev
-# TODO: paste the line AdMob gives you (AdMob › Apps › app-ads.txt), e.g.
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# app-ads.txt for owlworks.dev — AdMob (Tiny Legion, Android and iOS)
+google.com, pub-5566381828682599, DIRECT, f08c47fec0942fa0
