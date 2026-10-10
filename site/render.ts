@@ -446,7 +446,11 @@ function openSource(c: SiteContent): string {
         ${[0, 1, 2, 3]
           .map((i) => {
             const y = 34 + i * 44;
-            return `<g class="bus-lane" style="--i:${i}"><path class="bus-l" d="M40 100L${f2(40 + Math.abs(100 - y))} ${y}H214"/><path class="bus-pkt" d="M40 100L${f2(40 + Math.abs(100 - y))} ${y}H214"/><g class="bus-sw" transform="translate(150 ${y})"><circle cx="-12" cy="0" r="2.6"/><circle cx="12" cy="0" r="2.6"/><path class="bus-sw-arm" d="M-12 0L10 -9"/></g><text x="214" y="${y - 7}" text-anchor="end">${O.atelier.lanes[i]}</text></g>`;
+            const bend = 40 + Math.abs(100 - y);
+            // the lane is cut at the switch (contacts at x 138 and 162): only a closed arm joins it
+            const toSwitch = Math.SQRT2 * Math.abs(100 - y) + (138 - bend);
+            const total = toSwitch + (214 - 138);
+            return `<g class="bus-lane${i < 2 ? ' is-approved' : ''}" style="--i:${i};--stop:${f2(-(toSwitch - 12))};--end:${f2(-(total + 12))}"><path class="bus-l" d="M40 100L${f2(bend)} ${y}H138M162 ${y}H214"/><path class="bus-pkt" d="M40 100L${f2(bend)} ${y}H214"/><g class="bus-sw" transform="translate(150 ${y})"><circle cx="-12" cy="0" r="2.6"/><circle cx="12" cy="0" r="2.6"/><path class="bus-sw-arm" d="M-12 0L10 -9"/></g><text x="214" y="${y - 7}" text-anchor="end">${O.atelier.lanes[i]}</text></g>`;
           })
           .join('')}
         <text class="bus-main-t" x="14" y="92">${O.atelier.main}</text>

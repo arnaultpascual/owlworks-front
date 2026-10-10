@@ -3388,19 +3388,18 @@ html.cyan .rem li.late {
   opacity: 1;
   animation: pkt 4.8s calc(var(--i) * 1.2s) infinite linear;
 }
+/* the packet waits just before its switch (--stop, per lane) and crosses once the arm is closed */
 @keyframes pkt {
   0% {
     stroke-dashoffset: 10;
   }
-  30% {
-    stroke-dashoffset: -118;
-  }
+  30%,
   48% {
-    stroke-dashoffset: -118;
+    stroke-dashoffset: var(--stop);
   }
   80%,
   100% {
-    stroke-dashoffset: -230;
+    stroke-dashoffset: var(--end);
   }
 }
 @keyframes sw {
@@ -3416,8 +3415,20 @@ html.cyan .rem li.late {
     transform: rotate(0deg);
   }
 }
-.no-js .bus-sw-arm {
+/* still state (no JS, reduced motion): two lanes approved, two waiting */
+.no-js .bus-lane.is-approved .bus-sw-arm {
   transform: rotate(23deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .conn--atelier .bus-lane .bus-sw-arm {
+    animation: none !important;
+  }
+  .conn--atelier .bus-pkt {
+    display: none;
+  }
+  .conn--atelier .bus-lane.is-approved .bus-sw-arm {
+    transform: rotate(23deg);
+  }
 }
 .bus-main-t,
 .bus-gate-t {
