@@ -76,6 +76,9 @@ async function boot() {
     held: Record<string, number>;
     walkFrom: number;
     bestTier: number;
+    offered: Parameters<typeof g.pickCard>[0][];
+    pending: unknown;
+    swapChoices: string[];
     clearField(): void;
     nextWave(): void;
     recomputeStats(): void;
@@ -156,6 +159,12 @@ async function boot() {
     const now = performance.now();
     // the autopilot takes over again after 3 s without the visitor
     if (!g.bot && now - lastHuman > 3000 && g.state === 'playing') g.bot = true;
+    // the card offers (end of wave, chest) are hidden here and only the autopilot answers them:
+    // while the visitor steers, the frame takes a card itself, or the run would stay frozen
+    if (g.state === 'cards') {
+      if (L.pending) g.replaceCard(L.swapChoices[0] ?? null);
+      else if (L.offered.length) g.pickCard(L.offered[Math.floor(Math.random() * L.offered.length)]);
+    }
     // a run that ends starts again (the showcase never shows a game-over screen for long)
     if (g.state === 'over' && scene !== 'parade') {
       overT += 0.2;

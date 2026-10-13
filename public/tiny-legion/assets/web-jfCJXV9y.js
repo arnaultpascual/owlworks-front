@@ -1,0 +1,1 @@
+import{a as e,o as t,s as n}from"./Game-Dak9-UZP.js";var r=class extends n{async openAppStore(){throw this.createUnimplementedException()}async requestReview(){throw this.createUnimplementedException()}createUnimplementedException(){return new e(`This plugin method is not implemented on this platform.`,t.Unimplemented)}};export{r as AppReviewWeb};
