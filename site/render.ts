@@ -23,7 +23,7 @@ function sheetHead(no: string, name: string, refs: string): string {
 }
 
 function status(c: SiteContent, p: Project): string {
-  const tone = p.statusTone === 'live' ? c.ui.live : c.ui.soon;
+  const tone = c.ui[p.statusTone];
   if (p.stores?.length)
     return `<div class="status status--${p.statusTone}">${led('led--status')}<span class="status-k">${tone}</span>${storeLinks(c, p, 'tl-stores')}</div>`;
   return `<p class="status status--${p.statusTone}">${led('led--status')}<span class="status-k">${tone}</span><span class="status-v">${p.status}</span></p>`;

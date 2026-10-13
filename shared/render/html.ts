@@ -213,14 +213,16 @@ export function vendorLink(c: SiteContent, cls: string): string {
   return `<p class="${cls}">${link({ ...l, label: `${l.label}<span aria-hidden="true"> ↗</span>` }, '', c.a11y.newTab)}</p>`;
 }
 
-/** Store links of a product: a real link once published, "Google Play · bientôt" until then (text only, no badges). */
+/** Store links of a product: a real link once published, "App Store · bientôt" until then (text only, no badges).
+ *  While no store is live, the status already says "bientôt", so it is only read out. */
 export function storeLinks(c: SiteContent, p: { stores?: { name: string; href: string }[] }, cls: string): string {
   if (!p.stores?.length) return '';
+  const soonCls = p.stores.some((st) => st.href) ? 'store-soon' : 'sr-only';
   const items = p.stores
     .map((st) =>
       st.href
         ? `<li>${link({ label: `${st.name}<span aria-hidden="true"> ↗</span>`, href: st.href, external: true }, 'class="store"', c.a11y.newTab)}</li>`
-        : `<li><span class="store is-soon">${st.name}<span class="sr-only"> · ${c.ui.storeSoon}</span></span></li>`,
+        : `<li><span class="store is-soon">${st.name}<span class="${soonCls}"> · ${c.ui.storeSoon}</span></span></li>`,
     )
     .join('');
   return `<ul class="${cls}" role="list" aria-label="${c.ui.storesLabel}">${items}</ul>`;

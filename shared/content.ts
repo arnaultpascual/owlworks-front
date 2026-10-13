@@ -35,7 +35,7 @@ export const SITE = {
   github: 'https://github.com/arnaultpascual',
   /** Tiny Legion store pages: empty = shown as "coming soon", filled = a real link */
   stores: {
-    googlePlay: '', // https://play.google.com/store/apps/details?id=dev.owlworks.tinylegion
+    googlePlay: 'https://play.google.com/store/apps/details?id=dev.owlworks.tinylegion',
     appStore: '',
   },
   /** OwlWorks partner page on the Atlassian Marketplace (ReadSeal is not listed yet) */
@@ -91,7 +91,7 @@ export interface Project {
   kind: string;
   /** honest status line, shown as text */
   status: string;
-  statusTone: 'soon' | 'live';
+  statusTone: 'soon' | 'beta' | 'live';
   tagline: string;
   pitch: string;
   /** short, punchy line for very large type */
@@ -227,6 +227,7 @@ export interface SiteContent {
     storesLabel: string;
     source: string;
     soon: string;
+    beta: string;
     live: string;
   };
   legal: LegalContent;
@@ -872,8 +873,8 @@ export const fr: SiteContent = {
       id: 'tiny-legion',
       name: 'Tiny Legion',
       kind: 'Jeu mobile',
-      status: 'Bientôt sur l’App Store et Google Play',
-      statusTone: 'soon',
+      status: 'En ligne sur Google Play, bientôt sur l’App Store',
+      statusTone: 'live',
       tagline: 'Fusionne. Évolue. Écrase la horde.',
       shout: 'Écrase la horde.',
       pitch:
@@ -1103,6 +1104,7 @@ export const fr: SiteContent = {
     storesLabel: 'Télécharger Tiny Legion',
     source: 'Code source',
     soon: 'Bientôt',
+    beta: 'Bêta ouverte',
     live: 'En ligne',
   },
 
@@ -1398,8 +1400,8 @@ export const en: SiteContent = {
       id: 'tiny-legion',
       name: 'Tiny Legion',
       kind: 'Mobile game',
-      status: 'Coming soon to the App Store and Google Play',
-      statusTone: 'soon',
+      status: 'Live on Google Play, coming soon to the App Store',
+      statusTone: 'live',
       tagline: 'Merge. Evolve. Crush the horde.',
       shout: 'Crush the horde.',
       pitch:
@@ -1628,6 +1630,7 @@ export const en: SiteContent = {
     storesLabel: 'Get Tiny Legion',
     source: 'Source code',
     soon: 'Soon',
+    beta: 'Open beta',
     live: 'Live',
   },
 
