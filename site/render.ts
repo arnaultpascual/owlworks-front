@@ -1,7 +1,7 @@
 /** The site's HTML (Le Perchoir), rendered at build time: every section is a component on one trace. */
 import type { Project, SiteContent } from '../shared/content.ts';
 import { SITE, getContent } from '../shared/content.ts';
-import { head, alternatesFor, orgJsonLd, picture, pinnedRepos, mailto, link, markPlaceholders, plain, esc, vendorLink, storeLinks } from '../shared/render/html.ts';
+import { head, alternatesFor, orgJsonLd, picture, pinnedRepos, mailto, link, markPlaceholders, plain, esc, storeLinks } from '../shared/render/html.ts';
 import { owlSVGPrefixed } from '../shared/brand/owl.ts';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -282,6 +282,7 @@ function readseal(c: SiteContent): string {
   const pos = (d: number) => ((d - span[0]) / (span[1] - span[0])).toFixed(3);
   const rem = x.reminders.map((r) => `<li style="--x:${pos(day(r))}" class="${day(r) > 0 ? 'late' : ''}">${r}</li>`).join('');
   const ticks = Array.from({ length: 41 }, (_, i) => `<i${i % 5 === 0 ? ' class="maj"' : ''}></i>`).join('');
+  const docs = p.links!.map((l) => `<li>${link({ ...l, label: `${l.label}<span aria-hidden="true"> ↗</span>` }, '', c.a11y.newTab)}</li>`).join('');
   return `
   <section id="readseal" class="sec comp-sec rs" aria-labelledby="rs-title">
     ${sheetHead('06', R.sheet, R.ref)}
@@ -290,10 +291,11 @@ function readseal(c: SiteContent): string {
         ${compTag(R.ref, p.kind)}
         <h2 id="rs-title" class="rs-name">${readsealLogo}<span>${p.name}</span></h2>
         ${status(c, p)}
-        ${vendorLink(c, 'rs-vendor')}
         <p class="rs-tagline">${p.tagline}</p>
         <p class="rs-shout">${p.shout}</p>
         <p class="rs-pitch">${p.pitch}</p>
+        <p class="rs-cta">${link(p.cta!, 'class="btn btn--rs"', c.a11y.newTab)}<span class="rs-trial">${x.trial}</span></p>
+        <ul class="rs-docs" role="list">${docs}${x.docsLang ? `<li class="rs-docs-lang">(${x.docsLang})</li>` : ''}</ul>
       </div>
       <div class="rs-desk is-sealed" data-comp="u2" data-ref="${R.ref}">
         <article class="policy" aria-labelledby="policy-title">

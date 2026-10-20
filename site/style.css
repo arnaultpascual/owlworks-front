@@ -1971,6 +1971,63 @@ html.cyan .rs-name {
   max-width: 56ch;
   font-size: var(--step-0);
 }
+/* ReadSeal is live: the Marketplace button (the app's own wine), then its docs as text links */
+.rs-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 30px;
+}
+.btn--rs {
+  min-height: 52px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--rs-wine);
+  color: var(--rs-cream);
+  font: 700 1rem/1 var(--font-seal);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.btn--rs:hover {
+  background: var(--rs-wine-deep);
+  color: var(--rs-cream);
+}
+html.cyan .btn--rs {
+  background: #ffd9de;
+  color: var(--rs-wine-deep);
+}
+html.cyan .btn--rs:hover {
+  background: #fff;
+}
+.rs-trial {
+  max-width: 34ch;
+  font: 500 0.8125rem/1.4 var(--font-mono);
+  color: var(--ink-2);
+}
+.rs-docs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 2.2ch;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font: 500 0.82rem/1.4 var(--font-mono);
+  letter-spacing: 0.02em;
+}
+.rs-docs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+.rs-docs-lang {
+  color: var(--ink-2);
+}
 .rs-desk {
   position: relative;
   padding-right: 46px;
@@ -4097,21 +4154,6 @@ html.cyan .rem li.late {
 }
 .tl[data-state='game'] .btn--power:hover {
   background: rgb(255 255 255 / 0.12);
-}
-
-/* ReadSeal: OwlWorks partner page on the Atlassian Marketplace (text link, no logo) */
-.rs-vendor {
-  margin-top: 0.5rem;
-  font: 500 0.82rem/1.4 var(--font-mono);
-  letter-spacing: 0.02em;
-}
-.rs-vendor a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.22em;
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
 }
 
 /* Tiny Legion store links: plain text pills, real links once the game is published */

@@ -206,13 +206,6 @@ export function pinnedRepos(c: SiteContent) {
   });
 }
 
-/** "OwlWorks on the Atlassian Marketplace" line under ReadSeal's status (text only, no logo). */
-export function vendorLink(c: SiteContent, cls: string): string {
-  const l = c.projects.readseal.links?.[0];
-  if (!l) return '';
-  return `<p class="${cls}">${link({ ...l, label: `${l.label}<span aria-hidden="true"> ↗</span>` }, '', c.a11y.newTab)}</p>`;
-}
-
 /** Store links of a product: a real link once published, "App Store · bientôt" until then (text only, no badges).
  *  While no store is live, the status already says "bientôt", so it is only read out. */
 export function storeLinks(c: SiteContent, p: { stores?: { name: string; href: string }[] }, cls: string): string {

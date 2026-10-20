@@ -38,8 +38,13 @@ export const SITE = {
     googlePlay: 'https://play.google.com/store/apps/details?id=dev.owlworks.tinylegion',
     appStore: '',
   },
-  /** OwlWorks partner page on the Atlassian Marketplace (ReadSeal is not listed yet) */
+  /** OwlWorks partner page on the Atlassian Marketplace */
   atlassianVendor: 'https://marketplace.atlassian.com/vendors/413411677/owlworks',
+  /** ReadSeal: its Marketplace listing, and its own site (docs, security, privacy, support; in English) */
+  readseal: {
+    marketplace: 'https://marketplace.atlassian.com/apps/4138812370/readseal-read-confirmations-policy-attestation',
+    site: 'https://readseal.owlworks.dev',
+  },
   githubHandle: 'arnaultpascual',
   email: PLACEHOLDERS.CONTACT_EMAIL,
   linkedin: PLACEHOLDERS.LINKEDIN_URL,
@@ -182,6 +187,10 @@ export interface SiteContent {
     reminders: string[];
     screenshotsAlt: Record<string, string>;
     statusNote: string;
+    /** next to the Marketplace button */
+    trial: string;
+    /** after the docs links when they are in another language ('' = none) */
+    docsLang: string;
   };
   thirdwatchExtras: {
     uptimeLabel: string;
@@ -903,8 +912,8 @@ export const fr: SiteContent = {
       id: 'readseal',
       name: 'ReadSeal',
       kind: 'App Confluence',
-      status: 'Bientôt sur l’Atlassian Marketplace',
-      statusTone: 'soon',
+      status: 'En ligne sur l’Atlassian Marketplace',
+      statusTone: 'live',
       tagline: 'Lu. Confirmé. Scellé.',
       shout: 'Publié ne veut pas dire lu.',
       pitch:
@@ -941,7 +950,12 @@ export const fr: SiteContent = {
         { value: '0', label: 'serveur externe', detail: 'Ni email, ni tracking.' },
         { value: '4', label: 'langues', detail: 'Anglais, français, espagnol, allemand.' },
       ],
-      links: [{ label: 'OwlWorks sur l’Atlassian Marketplace', href: SITE.atlassianVendor, external: true }],
+      cta: { label: 'Essayer gratuitement', href: SITE.readseal.marketplace, external: true },
+      links: [
+        { label: 'Documentation', href: `${SITE.readseal.site}/docs.html`, external: true },
+        { label: 'Sécurité', href: `${SITE.readseal.site}/security.html`, external: true },
+        { label: 'Confidentialité', href: `${SITE.readseal.site}/privacy.html`, external: true },
+      ],
       aside: 'Le hibou a tout lu. Pour vos équipes, ReadSeal vérifie.',
     },
 
@@ -1023,6 +1037,8 @@ export const fr: SiteContent = {
       register: 'ReadSeal : le registre de preuve, avec le statut et la version confirmée par personne',
     },
     statusNote: 'Captures de la version actuelle, en anglais. L’app est aussi en français, en espagnol et en allemand.',
+    trial: 'Pour Confluence Cloud. Gratuit jusqu’à 10 utilisateurs, 30 jours d’essai au-delà.',
+    docsLang: 'en anglais',
   },
 
   thirdwatchExtras: {
@@ -1430,8 +1446,8 @@ export const en: SiteContent = {
       id: 'readseal',
       name: 'ReadSeal',
       kind: 'Confluence app',
-      status: 'Coming soon to the Atlassian Marketplace',
-      statusTone: 'soon',
+      status: 'Live on the Atlassian Marketplace',
+      statusTone: 'live',
       tagline: 'Read. Confirmed. Sealed.',
       shout: 'Published does not mean read.',
       pitch:
@@ -1468,7 +1484,12 @@ export const en: SiteContent = {
         { value: '0', label: 'external server', detail: 'No email, no tracking.' },
         { value: '4', label: 'languages', detail: 'English, French, Spanish, German.' },
       ],
-      links: [{ label: 'OwlWorks on the Atlassian Marketplace', href: SITE.atlassianVendor, external: true }],
+      cta: { label: 'Try it free', href: SITE.readseal.marketplace, external: true },
+      links: [
+        { label: 'Documentation', href: `${SITE.readseal.site}/docs.html`, external: true },
+        { label: 'Security', href: `${SITE.readseal.site}/security.html`, external: true },
+        { label: 'Privacy', href: `${SITE.readseal.site}/privacy.html`, external: true },
+      ],
       aside: 'The owl has read everything. For your teams, ReadSeal checks.',
     },
 
@@ -1550,6 +1571,8 @@ export const en: SiteContent = {
       register: 'ReadSeal: the evidence record, with each person’s status and confirmed version',
     },
     statusNote: 'Screenshots of the current version. The app also speaks French, Spanish and German.',
+    trial: 'For Confluence Cloud. Free for up to 10 users, 30-day trial beyond that.',
+    docsLang: '',
   },
 
   thirdwatchExtras: {
