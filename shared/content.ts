@@ -94,7 +94,7 @@ export interface Project {
   name: string;
   /** "Jeu mobile", "App Confluence"… */
   kind: string;
-  /** honest status line, shown as text */
+  /** honest status line, shown as text after the tone label ("En ligne" + "sur thirdwatch.app"): it carries on, never repeats it */
   status: string;
   statusTone: 'soon' | 'beta' | 'live';
   tagline: string;
@@ -882,7 +882,7 @@ export const fr: SiteContent = {
       id: 'tiny-legion',
       name: 'Tiny Legion',
       kind: 'Jeu mobile',
-      status: 'En ligne sur Google Play, bientôt sur l’App Store',
+      status: 'sur Google Play, bientôt sur l’App Store',
       statusTone: 'live',
       tagline: 'Fusionne. Évolue. Écrase la horde.',
       shout: 'Écrase la horde.',
@@ -912,7 +912,7 @@ export const fr: SiteContent = {
       id: 'readseal',
       name: 'ReadSeal',
       kind: 'App Confluence',
-      status: 'En ligne sur l’Atlassian Marketplace',
+      status: 'sur l’Atlassian Marketplace',
       statusTone: 'live',
       tagline: 'Lu. Confirmé. Scellé.',
       shout: 'Publié ne veut pas dire lu.',
@@ -963,7 +963,7 @@ export const fr: SiteContent = {
       id: 'thirdwatch',
       name: 'ThirdWatch',
       kind: 'SaaS · monitoring d’API',
-      status: 'En ligne sur thirdwatch.app',
+      status: 'sur thirdwatch.app',
       statusTone: 'live',
       tagline: 'Le monitoring d’API qui gère l’authentification à votre place.',
       shout: 'Il veille. Vous dormez.',
@@ -1416,7 +1416,7 @@ export const en: SiteContent = {
       id: 'tiny-legion',
       name: 'Tiny Legion',
       kind: 'Mobile game',
-      status: 'Live on Google Play, coming soon to the App Store',
+      status: 'on Google Play, coming soon to the App Store',
       statusTone: 'live',
       tagline: 'Merge. Evolve. Crush the horde.',
       shout: 'Crush the horde.',
@@ -1446,7 +1446,7 @@ export const en: SiteContent = {
       id: 'readseal',
       name: 'ReadSeal',
       kind: 'Confluence app',
-      status: 'Live on the Atlassian Marketplace',
+      status: 'on the Atlassian Marketplace',
       statusTone: 'live',
       tagline: 'Read. Confirmed. Sealed.',
       shout: 'Published does not mean read.',
@@ -1497,7 +1497,7 @@ export const en: SiteContent = {
       id: 'thirdwatch',
       name: 'ThirdWatch',
       kind: 'SaaS · API monitoring',
-      status: 'Live at thirdwatch.app',
+      status: 'at thirdwatch.app',
       statusTone: 'live',
       tagline: 'API monitoring that handles auth for you.',
       shout: 'It keeps watch. You sleep.',
